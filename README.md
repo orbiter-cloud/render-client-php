@@ -18,10 +18,10 @@ $render_client = return new \Orbito\RenderClient\RenderClient(
     [
         'default' => 'http://localhost:4250',
     ],
-    new \GuzzleHttp\Client(),
-    new \GuzzleHttp\Psr7\HttpFactory(),
-    new \GuzzleHttp\Psr7\HttpFactory(),
-    $logger,
+    ClientInterface         $http_client,
+    RequestFactoryInterface $request_factory,
+    StreamFactoryInterface  $stream_factory,
+    LoggerInterface         $logger,
 );
 $content = $this->renderer->render(
     'default', 'en', 'main',
@@ -44,8 +44,8 @@ $style = $this->renderer->style(
 if(!$style) {
     return;
 }
-error_log('Generated style in ' . $content->styleTime . 'ms');
-$css = $content->style;
+error_log('Generated style in ' . $style->styleTime . 'ms');
+$css = $style->style;
 ```
 
 ## Dev Notices
