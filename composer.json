@@ -1,0 +1,26 @@
+{
+    "name": "orbito/render-client",
+    "license": "MIT",
+    "homepage": "https://bemit.codes",
+    "version": "0.0.1",
+    "description": "HTTP Client for Orbito Render",
+    "require": {
+        "php": "~8.0||~8.1",
+        "psr/http-message": "^1.0",
+        "psr/http-client": "^1.0",
+        "psr/http-factory": "^1.0",
+        "psr/log": "^1.0||^2.0||^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Orbito\\RenderClient\\": "src"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "guzzlehttp/guzzle": "^7.0",
+        "monolog/monolog": "^2.8.0"
+    }
+}

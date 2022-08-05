@@ -1,0 +1,12 @@
+.env*
+!.env.example
+
+/vendor
+
+.phpunit.result.cache
+
+.DS_Store
+
+.idea/
+*.iml
+*.iws
