@@ -1,8 +1,8 @@
 # Orbito\RenderClient
 
-[![Latest Stable Version](https://poser.pugx.org/orbito/render-client/version.svg)](https://packagist.org/packages/orbito/render-client)
-[![Latest Unstable Version](https://poser.pugx.org/orbito/render-client/v/unstable.svg)](https://packagist.org/packages/orbito/render-client)
-[![codecov](https://codecov.io/gh/orbiter-cloud/render-client-php/branch/master/graph/badge.svg?token=1bWW7plF1C)](https://codecov.io/gh/orbiter-cloud/render-client-php)
+[![Latest Stable Version](https://poser.pugx.org/orbito/render-client/version)](https://packagist.org/packages/orbito/render-client)
+[![Latest Unstable Version](https://poser.pugx.org/orbito/render-client/v/unstable)](https://packagist.org/packages/orbito/render-client)
+[![codecov](https://codecov.io/gh/orbiter-cloud/render-client-php/branch/main/graph/badge.svg)](https://codecov.io/gh/orbiter-cloud/render-client-php)
 [![Total Downloads](https://poser.pugx.org/orbito/render-client/downloads.svg)](https://packagist.org/packages/orbito/render-client)
 [![Github actions Build](https://github.com/orbiter-cloud/render-client-php/actions/workflows/blank.yml/badge.svg)](https://github.com/orbiter-cloud/render-client-php/actions)
 [![PHP Version Require](http://poser.pugx.org/orbito/render-client/require/php)](https://packagist.org/packages/orbito/render-client)
