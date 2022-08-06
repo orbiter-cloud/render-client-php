@@ -14,7 +14,15 @@ composer require orbito/render-client
 ```
 
 ```php
-$render_client = return new \Orbito\RenderClient\RenderClient(
+use Psr\Http\Client\ClientInterface;
+use Psr\Http\Message\RequestFactoryInterface;
+use Psr\Http\Message\StreamFactoryInterface;
+use Psr\Log\LoggerInterface;
+use Orbito\RenderClient\RenderClient;
+use Orbito\RenderClient\TemplateRef;
+use Orbito\RenderClient\TemplateOptimize;
+
+$render_client = new RenderClient(
     [
         'default' => 'http://localhost:4250',
     ],
@@ -29,6 +37,8 @@ $content = $this->renderer->render(
     TemplateOptimize::makeFor('html'),
     [],// data
     [],// styleVars
+    ['renderText' => true],// optional, options
+    null|string,// optional, trace for logging
 );
 if(!$content) {
     return;

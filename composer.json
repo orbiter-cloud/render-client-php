@@ -2,7 +2,7 @@
     "name": "orbito/render-client",
     "license": "MIT",
     "homepage": "https://bemit.codes",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "HTTP Client for Orbito Render",
     "require": {
         "php": "~8.0||~8.1",
