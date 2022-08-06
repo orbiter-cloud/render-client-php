@@ -1,8 +1,8 @@
 # Orbito\RenderClient
 
-[![Latest Stable Version](https://poser.pugx.org/orbito/render-client/version.svg)](https://packagist.org/packages/orbito/render-client)
-[![Latest Unstable Version](https://poser.pugx.org/orbito/render-client/v/unstable.svg)](https://packagist.org/packages/orbito/render-client)
-[![codecov](https://codecov.io/gh/orbiter-cloud/render-client-php/branch/master/graph/badge.svg?token=1bWW7plF1C)](https://codecov.io/gh/orbiter-cloud/render-client-php)
+[![Latest Stable Version](https://poser.pugx.org/orbito/render-client/version)](https://packagist.org/packages/orbito/render-client)
+[![Latest Unstable Version](https://poser.pugx.org/orbito/render-client/v/unstable)](https://packagist.org/packages/orbito/render-client)
+[![codecov](https://codecov.io/gh/orbiter-cloud/render-client-php/branch/main/graph/badge.svg)](https://codecov.io/gh/orbiter-cloud/render-client-php)
 [![Total Downloads](https://poser.pugx.org/orbito/render-client/downloads.svg)](https://packagist.org/packages/orbito/render-client)
 [![Github actions Build](https://github.com/orbiter-cloud/render-client-php/actions/workflows/blank.yml/badge.svg)](https://github.com/orbiter-cloud/render-client-php/actions)
 [![PHP Version Require](http://poser.pugx.org/orbito/render-client/require/php)](https://packagist.org/packages/orbito/render-client)
@@ -14,7 +14,15 @@ composer require orbito/render-client
 ```
 
 ```php
-$render_client = return new \Orbito\RenderClient\RenderClient(
+use Psr\Http\Client\ClientInterface;
+use Psr\Http\Message\RequestFactoryInterface;
+use Psr\Http\Message\StreamFactoryInterface;
+use Psr\Log\LoggerInterface;
+use Orbito\RenderClient\RenderClient;
+use Orbito\RenderClient\TemplateRef;
+use Orbito\RenderClient\TemplateOptimize;
+
+$render_client = new RenderClient(
     [
         'default' => 'http://localhost:4250',
     ],
@@ -29,6 +37,8 @@ $content = $this->renderer->render(
     TemplateOptimize::makeFor('html'),
     [],// data
     [],// styleVars
+    ['renderText' => true],// optional, options
+    null|string,// optional, trace for logging
 );
 if(!$content) {
     return;

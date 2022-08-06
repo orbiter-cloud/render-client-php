@@ -54,8 +54,8 @@ class RenderClient {
         string           $style,
         TemplateRef      $template,
         TemplateOptimize $optimize,
-        array            $data,
-        array            $styleVars,
+        array|\stdClass  $data,
+        array|\stdClass  $styleVars,
         ?array           $options = [],
         ?string          $trace = null,
     ) {
